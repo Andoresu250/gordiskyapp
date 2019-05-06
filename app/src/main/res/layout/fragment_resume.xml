@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <include layout="@layout/content_progressbar"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/fragmentLayout"
+            android:padding="@dimen/activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <android.support.design.widget.TextInputLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/totalInvertedTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                android:enabled="false"
+                >
+
+                <EditText
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="false"
+                    android:id="@+id/totalInvertedEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_totalInverted"
+                    style="@style/BaseEditText"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/totalInvertedWithInterestTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="false"
+                >
+
+                <EditText
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="false"
+                    android:id="@+id/totalInvertedWithInterestEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_totalInvertedWithInterest"
+                    style="@style/BaseEditText"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/totalAssetsTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/totalInvertedTextInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                android:enabled="false"
+                >
+
+                <EditText
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="false"
+                    android:id="@+id/totalAssetsEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_totalAssets"
+                    style="@style/BaseEditText"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/totalLiabilitiesTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/totalInvertedTextInputLayout"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="false"
+                >
+
+                <EditText
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="false"
+                    android:id="@+id/totalLiabilitiesEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_totalLiabilities"
+                    style="@style/BaseEditText"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/totalGainTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/totalAssetsTextInputLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                android:enabled="false"
+                >
+
+                <EditText
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="false"
+                    android:id="@+id/totalGainEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_totalGain"
+                    style="@style/BaseEditText"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/totalProfitTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/totalAssetsTextInputLayout"
+                app:layout_constraintStart_toEndOf="@id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:enabled="false"
+                >
+
+                <EditText
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:enabled="false"
+                    android:id="@+id/totalProfitEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/input_totalProfit"
+                    style="@style/BaseEditText"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+
+
+
+</android.support.v7.widget.CardView>

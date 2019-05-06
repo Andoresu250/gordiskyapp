@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:paddingBottom="8dp"
+    android:layout_marginBottom="8dp"
+    card_view:cardElevation="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <android.support.design.widget.TextInputLayout
+            android:focusable="false"
+            android:id="@+id/paymentNumberTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:enabled="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/personIdentificationTextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            >
+
+            <EditText
+                android:enabled="false"
+                android:clickable="false"
+                android:id="@+id/paymentNumberEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_paymentNumber"
+                style="@style/BaseEditText"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusable="false"
+            android:id="@+id/paymentStateTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:enabled="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/personIdentificationTextInputLayout"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <EditText
+                android:enabled="false"
+                android:clickable="false"
+                android:id="@+id/paymentStateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_paymentState"
+                style="@style/BaseEditText"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusable="false"
+            android:id="@+id/paymentValueTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:enabled="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/paymentNumberTextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            >
+
+            <EditText
+                android:enabled="false"
+                android:clickable="false"
+                android:id="@+id/paymentValueEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_paymentValue"
+                style="@style/BaseEditText"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusable="false"
+            android:id="@+id/paymentPaidValueTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:enabled="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/paymentNumberTextInputLayout"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <EditText
+                android:enabled="false"
+                android:clickable="false"
+                android:id="@+id/paymentPaidValueEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_paymentPaidValue"
+                style="@style/BaseEditText"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:focusable="false"
+            android:id="@+id/paymentDateTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:enabled="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/paymentPaidValueTextInputLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            >
+
+            <EditText
+                android:enabled="false"
+                android:clickable="false"
+                android:id="@+id/paymentDateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_paymentDate"
+                style="@style/BaseEditText"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:focusable="false"
+            android:id="@+id/paymentPaidAtTextInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:errorEnabled="true"
+            android:enabled="false"
+            android:clickable="false"
+            app:layout_constraintTop_toBottomOf="@id/paymentValueTextInputLayout"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <EditText
+                android:enabled="false"
+                android:clickable="false"
+                android:id="@+id/paymentPaidAtEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_paymentPaidAt"
+                style="@style/BaseEditText"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v7.widget.CardView>
